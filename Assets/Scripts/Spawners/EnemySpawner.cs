@@ -37,7 +37,7 @@ public class EnemySpawner : MonoBehaviour {
     {
         Vector3 pos = GetRandomPositionInZone();
         if (pos != Vector3.zero)
-            return Instantiate(enemyPrefab, pos, transform.rotation);
+            return Poolable.Instantiate(enemyPrefab, pos, transform.rotation);
         return null;
     }
 	

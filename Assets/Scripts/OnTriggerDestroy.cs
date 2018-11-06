@@ -12,9 +12,9 @@ public class OnTriggerDestroy : MonoBehaviour {
         Rigidbody2D rb = col.attachedRigidbody;
         GameObject obj = rb ? rb.gameObject : col.gameObject;
         if (destroyOther)
-            Destroy(obj);
+            Poolable.Destroy(obj);
         if (destroySelf)
-            Destroy(gameObject);
+            Poolable.Destroy(gameObject);
     }
 
 }
